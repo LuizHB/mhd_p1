@@ -16,7 +16,8 @@ cont = 0
 while(x != cont and a <81):
     cont = x
     x = x - funcao(x)/ derivadafuncao(x)
-
+    e = abs((x-cont)/x)
+    x = x + e
     print ("x" + str(a) + " = " + str (x) +"\n")
     a = a+1
 
