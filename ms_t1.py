@@ -11,10 +11,10 @@ def derivadafuncao(x):
 a = int(0)
 
 x = float(input("Valor de x"))
-t = 0
+cont = 0
 
-while(x != t and a <81):
-    t = x
+while(x != cont and a <81):
+    cont = x
     x = x - funcao(x)/ derivadafuncao(x)
 
     print ("x" + str(a) + " = " + str (x) +"\n")
