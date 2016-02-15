@@ -10,7 +10,7 @@ def derivadafuncao(x):
 
 a = int(0)
 
-x = float(input("Valor de x"))
+x = 1
 cont = 0
 
 while(x != cont and a <81):
