@@ -32,7 +32,6 @@ def main(argv):
        # print 'sd = %f' % sd  (funcao para checar os numeros escolhidos na lista)
         for i, a in enumerate(avc):
             rr[i] = bissection(a,sd)
-
         if itr == 0:
             py.plot(avc, rr,'b-')
         elif itr == len(vsd)-1:
