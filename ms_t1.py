@@ -4,8 +4,6 @@ import sys
 import pylab as py
 import numpy as np
 
-
-
 def f(x, a, sd):
     ld = 6.93
     return x ** 6 * np.exp(ld / x) * np.exp(a ** 2 * 0.5 * 0.000145 * (x ** 2 - 1 / x)) - sd * a * np.exp(6.93)
@@ -24,7 +22,6 @@ def bissection(a, sd=4.):
             x1 = xx
         else:
             x0 = xx
-
 
 def main(argv):
     avc = np.linspace(1,80,80)
@@ -45,7 +42,6 @@ def main(argv):
 
     py.show()
 
-
 if __name__ == "__main__":
     main(sys.argv[1:])
-
+    
