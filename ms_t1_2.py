@@ -2,8 +2,6 @@ import sys
 import pylab as py
 import numpy as np
 
-
-
 def f(x, a, sd):
     ld = 6.93
     return x ** 6 * np.exp(ld / x) * np.exp(a ** 2 * 0.5 * 0.000145 * (x ** 2 - 1 / x)) - sd * a**2 * np.exp(6.93)
@@ -23,7 +21,6 @@ def bissection(a, sd=4.):
         else:
             x0 = xx
 
-
 def main(argv):
     avc = np.linspace(1,80,80)
     rr = np.zeros_like(avc)
@@ -33,7 +30,6 @@ def main(argv):
        # print 'sd = %f' % sd  (funcao para checar os numeros escolhidos na lista)
         for i, a in enumerate(avc):
             rr[i] = bissection(a,sd)
-
         if itr == 0:
             py.plot(avc, rr,'b-')
         elif itr == len(vsd)-1:
@@ -43,7 +39,5 @@ def main(argv):
 
     py.show()
 
-
 if __name__ == "__main__":
     main(sys.argv[1:])
-
