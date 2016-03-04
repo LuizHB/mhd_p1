@@ -6,11 +6,11 @@ import numpy as np
 
 def f(x, a, sd):
     ld = 6.93
-    return x ** 6 * np.exp(ld / x) * np.exp(a ** 2 * 0.5 * 0.000145 * (x ** 2 - 1 / x)) - sd * a * np.exp(6.93)
+    return x ** 6 * np.exp(ld / x) * np.exp(a ** 2 * 0.5 * 0.000145 * (x ** 2 - 1 / x)) - sd * a**2 * np.exp(6.93)
 
 def bissection(a, sd=4.):
     x0 = 1.0
-    x1 = 10.0
+    x1 = 15.0
 
     for i in range(100):
         xx = (x0 + x1) / 2.
@@ -46,3 +46,4 @@ def main(argv):
 
 if __name__ == "__main__":
     main(sys.argv[1:])
+
